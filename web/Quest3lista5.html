@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d3d3d3;
+        }
+
+        .container {
+            width: 360px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .user-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .user-card:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .user-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-info .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .user-info .address {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="user-card">
+            <img src="araraazul.jpg" alt="Arara Azul" class="user-image">
+            <div class="user-info">
+                <div class="name">Arara Azul</div>
+                <div class="address">2020 duda</div>
+            </div>
+        </div>
+        <div class="user-card">
+            <img src="capivara.jpg" alt="Capivara" class="user-image">
+            <div class="user-info">
+                <div class="name">Capivara</div>
+                <div class="address">2021 isa</div>
+            </div>
+        </div>
+        <div class="user-card">
+            <img src="gaviao.jpg" alt="Gaviao" class="user-image">
+            <div class="user-info">
+                <div class="name">Gaviao</div>
+                <div class="address">2022 cami</div>
+            </div>
+        </div>
+        <div class="user-card">
+            <img src="porcoespinho.jpg" alt="Porco Espinho" class="user-image">
+            <div class="user-info">
+                <div class="name">Porco Espinho</div>
+                <div class="address">2024 Mary</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

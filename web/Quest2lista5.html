@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Simples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 320px;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #A020F0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            color:  #A020F0;
+            font-size: 18px;
+        }
+
+        .input-placeholder {
+            width: 100%;
+            height: 40px;
+            margin: 10px 0;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        .foto {
+            min-width: 50px;
+            min-height: 50px;
+            width: 20vw;
+            height: 20vw;
+            background-color: gray;
+            border-radius: 50%;
+            border: 5px solid gray ;
+            
+        }
+
+        .button-placeholder {
+            width: 100px;
+            height: 35px;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">Área da dudah</div>
+        <div class="input-placeholder">Nome</div>
+        <div class="input-placeholder">Sobrenome</div>
+        <div class="input-placeholder"> Data Nascimento</div>
+        <img src="animal.jpg" alt="" class="foto">
+        <div class="button-placeholder">Cadastro</div>
+    </div>
+
+</body>
+</html>
