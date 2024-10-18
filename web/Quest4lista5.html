@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Flexbox</title>
+    <title>Layout Flexbox com Hover e Imagem Completa</title>
     <style>
         * {
             margin: 0;
@@ -17,105 +17,128 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #f3f3f3;
         }
 
-        .gallery-container {
+        .container {
             display: flex;
-            gap: 15px;
-        }
-        .box {
-            border: 1px solid black;
-            background-image: url("Desert.webp");
-            flex: 1;
-            background-size: 100%;
-            min-width: 0px;
-            border-radius: 20%;
-            margin: 4px;
-            transition: flex-grow 2s;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            
-        }
-        img[src="montanha.webp"] {
-            
-        }
-        .box:hover {
-            flex-grow: 5;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+            justify-content: center;
         }
 
-        .gallery-item {
+        .card {
             position: relative;
+            width: 230px;
+            height: 180px;
             border-radius: 20px;
             overflow: hidden;
-            width: 150px;
-            height: 400px;
-            flex-shrink: 0;
+            background-color: #ddd;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1; 
         }
 
-        .gallery-item.large {
-            width: 350px;
+        .card.large {
+            width: 230px;
         }
 
-        .gallery-item img {
-            width: 100%;
+        .card img {
+            width:  100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
+            object-fit: cover; 
+            transition: transform 0.3s ease-in-out;
         }
 
-        .info {
+
+        .container .card:hover {
+            transform: scale(2.0); 
+            z-index: 10; 
+        }
+
+        .container .card:not(:hover) {
+            transform: scale(0.9);
+            z-index: 1;
+        }
+
+      
+        .card:hover img {
+            object-fit: contain; 
+        }
+
+        .card-footer {
             position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: rgb(9, 9, 9);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .info .title {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .info .subtitle {
-            font-size: 14px;
+        .card-footer p {
+            margin: 0;
         }
 
         .icon {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(5, 5, 5, 0.8);
-            padding: 10px;
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
         }
+
     </style>
 </head>
 <body>
 
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="montanha.webp" alt="Mountain">
-            <div class="icon">🌲</div>
-        </div>
-        <div class="gallery-item large">
-            <img src="Forest Road.png" alt="Forest Road">
-            <div class="info">
-                <div class="title">Floresta Encantada</div>
-                <div class="subtitle">Um lugar mágico</div>
-            </div>
-            <div class="icon">❄️</div>
-        </div>
-        <div class="gallery-item">
-            <img src="Sunset.png" alt="Sunset">
+    <div class="container">
+        <div class="card">
+            <img src="Sunset.png" alt="Imagem 1">
+            <div class = "card-footer" 
+            <p>Por do Sol</p>
             <div class="icon">🌞</div>
         </div>
-        <div class="gallery-item">
-            <img src="Desert.webp" alt="Desert">
+        </div>
+
+        <div class="card large">
+            <img src="Ocean.webp" alt="Imagem 2">
+            <div class = "card-footer" 
+            <p>Oceano</p>
+            <div class="icon">🌊</div>
+        </div>
+        </div>
+
+        <div class="card">
+            <img src="montanha.webp" alt="Imagem 3">
+            <div class = "card-footer" 
+            <p>Montanha</p>
+            <div class="icon">🏔️</div>
+        </div>
+            
+        </div>
+
+        <div class="card">
+            <img src="Forest Road.png" alt="Imagem 4">
+            <div class = "card-footer" 
+            <p>Floresta</p>
+            <div class="icon">🌲</div>
+        </div>
+        </div>
+
+        <div class="card">
+            <img src="Desert.webp" alt="Imagem 5">
+            <div class = "card-footer" 
+            <p>Deserto</p>
             <div class="icon">🏜️</div>
         </div>
-        <div class="gallery-item">
-            <img src="Ocean.webp" alt="Ocean">
-            <div class="icon">🌊</div>
+            
         </div>
     </div>
 
