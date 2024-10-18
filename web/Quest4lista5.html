@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .gallery-container {
+            display: flex;
+            gap: 15px;
+        }
+        .box {
+            border: 1px solid black;
+            background-image: url("Desert.webp");
+            flex: 1;
+            background-size: 100%;
+            min-width: 0px;
+            border-radius: 20%;
+            margin: 4px;
+            transition: flex-grow 2s;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            
+        }
+        img[src="montanha.webp"] {
+            
+        }
+        .box:hover {
+            flex-grow: 5;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 150px;
+            height: 400px;
+            flex-shrink: 0;
+        }
+
+        .gallery-item.large {
+            width: 350px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgb(9, 9, 9);
+        }
+
+        .info .title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .info .subtitle {
+            font-size: 14px;
+        }
+
+        .icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(5, 5, 5, 0.8);
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="montanha.webp" alt="Mountain">
+            <div class="icon">🌲</div>
+        </div>
+        <div class="gallery-item large">
+            <img src="Forest Road.png" alt="Forest Road">
+            <div class="info">
+                <div class="title">Floresta Encantada</div>
+                <div class="subtitle">Um lugar mágico</div>
+            </div>
+            <div class="icon">❄️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Sunset.png" alt="Sunset">
+            <div class="icon">🌞</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Desert.webp" alt="Desert">
+            <div class="icon">🏜️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Ocean.webp" alt="Ocean">
+            <div class="icon">🌊</div>
+        </div>
+    </div>
+
+</body>
+</html>
