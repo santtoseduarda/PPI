@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            min-height: 100vh;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 600px){
+            .container{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            width: 310px;
+            height: 330px;
+        }
+
+        #italy {
+            padding: 10px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .Verde {
+            background-color: green;
+            width: 90px;
+            height: 225px;
+        }
+        .Branco {
+            background-color: white;
+            width: 90px;
+            height: 225px;
+        }
+
+        .Vermelho {
+            background-color: red;
+            width: 90px;
+            height: 225px;
+        }
+        
+
+        #france {
+            padding: 10px;
+        }
+
+        .VermelhoF {
+            background-color: red;
+            width: 300px;
+            height: 75px;
+        }
+
+        .BrancoF {
+            background-color: white;
+            width: 300px;
+            height: 75px;
+        }
+
+        .Azul {
+            background-color: rgb(4, 4, 166);
+            width: 300px;
+            height: 75px;
+        }
+
+        #japan {
+            padding: 10px;    
+        }
+
+        .BrancoJ {
+            background-color: white;
+            width: 300px;
+            height: 225px;
+            border: 1px solid black;
+        }
+
+        .Circulo {
+            width: 100px;
+            height: 100px;
+            margin: 60px auto 20px auto;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="italy">
+            <div class="Verde"></div>
+            <div class="Branco"></div>
+            <div class="Vermelho"></div>
+            <p>Itália</p>   
+        </div>
+        <div class="box" id="france">
+            <div class="VermelhoF"></div>
+            <div class="BrancoF"></div>
+            <div class="Azul"></div>
+            <p>França</p>
+        </div>
+        <div class="box" id="japan">
+            <div class="BrancoJ">
+            <div class="Circulo"></div>
+            </div>
+            <p>Japão</p>
+        </div>
+    </div>
+
+</body>
+</html>
