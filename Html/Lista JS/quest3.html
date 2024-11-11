@@ -7,23 +7,29 @@
 </head>
 <body>
     <script>
-        let a ="a";
-        let b ="12";
-        let Dudahh = true;
-        let c = {nome: "Dudahh"};
+     
+        let nome = "eduarda.santos";
+        let duracao = 3;
+        let passou = true;
+        let semestre1 = ["algoritmos","introd. a computação","adm","calculo"]
+        
+        let curso = {
+            nome:"du",
+            duracao:5,
+            passou: true
+       }
 
-        function isos(variavel){
-            return typeof(variavel);
-        }
-
-        alert(isos(a) + " Valor: " +a);
-        alert(isos(b) + " Valor: " + b);
-        alert(isos(Dudahh) + " Valor: " + Dudahh);
-        alert(isos(c.nome) + " Valor: " + c.nome);
+ 
+       console.log(`o nome do curso é: ${nome} e o td é ${typeof(curso.nome)}`);
+       console.log(`o nome do curso é: ${duracao} e o td é ${typeof(curso.duracao)}`);
+       console.log(`o nome do curso é: ${passou} e o td é ${typeof(curso.passou)}`);
+       console.log(`As UCs do primeiro semestre ${semestre1} e o td é ${typeof(semestre1)}`);
+       console.log(`um obj com dado o curso ${JSON.stringify(curso)}`);
+     
+       
+       let template = `<p> <input value =${passou}></p> `;
+       
+       document.body.innerHTML=template;
     </script>
 </body>
 </html>
-
-
-
-
