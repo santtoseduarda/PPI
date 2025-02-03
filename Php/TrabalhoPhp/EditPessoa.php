@@ -15,7 +15,7 @@
         }
     ?>
     <fieldset>
-        <form action="pessoa_controler.php" method="post">
+        <form action="PessoaController.php" method="post">
             <input type="text" name="id" id="id" hidden>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" value= "<?php echo $pessoa ["nome" ]?>">
