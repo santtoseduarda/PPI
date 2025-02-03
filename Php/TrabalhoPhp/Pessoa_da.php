@@ -47,11 +47,22 @@ function getUsuario($id){
 
 function editar_usuario($id, $nome, $email) {
     $db = conectdb();
-    $sql = "UPDATE pessoas SET nome = :nome, email = :email WHERE id = :id";
+    
+    // SQL para atualizar os dados no banco de dados
+    $sql = "UPDATE usuarios SET nome = :nome, email = :email WHERE id = :id";
     $stmt = $db->prepare($sql);
+    
+    // Bind dos parâmetros
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':id', $id);
+    
+    // Executa a query
     $stmt->execute();
+    
+    // Fecha a conexão com o banco
+    $db = null;
 }
+
+
 ?>

@@ -4,7 +4,7 @@ include_once("Pessoa_da.php");
 
 if (isset($_POST["acao"])) {
     if ($_POST["acao"] == "cadastrar") {
-        // Lógica para cadastrar uma pessoa
+        // Lógica para cadastrar um novo usuário
         if (isset($_POST["nome"]) && isset($_POST["email"])) {
             $nome = $_POST["nome"];
             $email = $_POST["email"];
@@ -13,12 +13,14 @@ if (isset($_POST["acao"])) {
             exit();
         }
     } elseif ($_POST["acao"] == "editar") {
-        // Lógica para editar uma pessoa
+        // Lógica para editar um usuário existente
         if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["email"])) {
             $id = $_POST["id"];
             $nome = $_POST["nome"];
             $email = $_POST["email"];
-            editar_usuario($id, $nome, $email); // Função que você precisa implementar
+            
+            // Chama a função de edição
+            editar_usuario($id, $nome, $email);
             header("Location: listar.php");
             exit();
         }

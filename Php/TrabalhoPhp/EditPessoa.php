@@ -15,15 +15,15 @@
         }
     ?>
     <fieldset>
-        <form action="PessoaController.php" method="post">
-            <input type="text" name="id" id="id" hidden>
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" value= "<?php echo $pessoa ["nome" ]?>">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email"value= "<?php echo $pessoa ["email" ]?>">
-            <input type = "text" name= "acao" value= "cadastrar" hidden>
-            <input type="submit" value="Salvar Alteraçoes">
-        </form>
+    <form action="PessoaController.php" method="post">
+    <input type="text" name="id" id="id" value="<?php echo $pessoa['id']; ?>" hidden>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="<?php echo $pessoa['nome']; ?>">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" value="<?php echo $pessoa['email']; ?>">
+    <input type="text" name="acao" value="editar" hidden> <!-- Certifique-se de que a ação é "editar" -->
+    <input type="submit" value="Salvar Alterações">
+</form>
     </fieldset>
 </body>
 </html>
